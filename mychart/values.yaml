@@ -9,7 +9,7 @@ image:
   repository: eduardusatchev/2402-myimage
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-#   tag: ""
+  tag: ""
 
 # imagePullSecrets: []
 # nameOverride: ""
