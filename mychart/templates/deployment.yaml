@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,8 +5,8 @@ metadata:
   labels:
     {{- include "mychart.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
+  {{- if not (default false .Values.autoscaling.enabled) }}
+  replicas: {{ default 1 .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
