@@ -1,4 +1,4 @@
-# .github/workflows/docker-image-build.yaml
+## .github/workflows/docker-image-build.yaml
 name: Build and Deploy Docker Image
 
 on:
